@@ -36,9 +36,11 @@
 对Censys REST API的Python轻量级封装
 - [libcrafter](https://github.com/pellegre/libcrafter) - High level C++ network packet sniffing and crafting library.
 一个c++的高级库，用于创建和解码网络数据包。
-- [python-dshield](https://github.com/rshipp/python-dshield) - 连接SANS ISC/DShiel API的Python接口。补充：SANS ISC是一个全球性的安全事件响应组织，为所有的Internet用户和组织提供免费的互联网攻击分析和预警服务。
+- [python-dshield](https://github.com/rshipp/python-dshield) - 连接SANS ISC/DShiel API的Python接口。
+    - 补充：SANS ISC是一个全球性的安全事件响应组织，为所有的Internet用户和组织提供免费的互联网攻击分析和预警服务。
 - [python-sandboxapi](https://github.com/InQuest/python-sandboxapi) - 用于构建恶意软件沙箱集成的最小型、并且长期有效的的Python API。
-- [python-stix2](https://github.com/oasis-open/cti-python-stix2) - 用于序列化和反序列化STIX（JSON形式）的Python API，以及一些用于常见任务的高级API。补充：STIX是用来交换威胁情报的一种语言和序列化格式，由MITRE联合DHS（美国国土安全部）发布。
+- [python-stix2](https://github.com/oasis-open/cti-python-stix2) - 用于序列化和反序列化STIX（JSON形式）的Python API，以及一些用于常见任务的高级API。
+    - 补充：STIX是用来交换威胁情报的一种语言和序列化格式，由MITRE联合DHS（美国国土安全部）发布。
 
 ### 安全编排自动化与响应（SOAR）
 
