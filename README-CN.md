@@ -41,7 +41,7 @@
     - [防火墙设备或发行版](#%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E5%A4%87%E6%88%96%E5%8F%91%E8%A1%8C%E7%89%88)
     - [操作系统发行版](#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%91%E8%A1%8C%E7%89%88)
     - [网络钓鱼意识和报告](#%E7%BD%91%E7%BB%9C%E9%92%93%E9%B1%BC%E6%84%8F%E8%AF%86%E5%92%8C%E6%8A%A5%E5%91%8A)
-- [备战训练及演习](#%E5%A4%87%E6%88%98%E8%AE%AD%E7%BB%83%E5%8F%8A%E6%BC%94%E4%B9%A0)
+- [攻防演练](#%E5%A4%87%E6%88%98%E8%AE%AD%E7%BB%83%E5%8F%8A%E6%BC%94%E4%B9%A0)
 - [安全监控](#%E5%AE%89%E5%85%A8%E7%9B%91%E6%8E%A7)
     - [端点防护及响应（EDR）](#%E7%AB%AF%E7%82%B9%E9%98%B2%E6%8A%A4%E5%8F%8A%E5%93%8D%E5%BA%94edr)
     - [网络安全监控（NSM）](#%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9B%91%E6%8E%A7nsm)
@@ -119,7 +119,7 @@ COMSEC, Communications Security, 通讯安全
 
 ## DevSecOps
 
-请同时参阅[awesome-devsecops](https://github.com/devsecops/awesome-devsecops)该项目。
+另请参阅：[awesome-devsecops](https://github.com/devsecops/awesome-devsecops)
 
 补充：DevOps旨在加强开发人员，IT运营和安全性之间的关系。
 
@@ -138,9 +138,7 @@ COMSEC, Communications Security, 通讯安全
 ### 应用或二进制加固
 
 - [Egalito](https://egalito.org/) - 是一个二进制反编译器，可以完全反汇编、转换和重新生成用于二进制强化和安全性研究的普通Linux二进制文件。
-### 模糊测试
-
-Fuzzing
+### 模糊测试（Fuzzing）
 
 另请参阅： [Awesome-Fuzzing](https://github.com/secfigo/Awesome-Fuzzing).
 
@@ -166,7 +164,7 @@ Fuzzing
 
 其实这也是从攻防成本的角度出发，攻防对抗的本质是成本的对抗，利用该类型的蜜罐技术，可以增加攻击者的时间成本，从而丧失行动力。
 
-这种概念类似焦油坑，陷入其中的东西会缓慢地沉入，让对方失去行动力。
+这种概念类似焦油坑，陷入其中的东西会缓慢地沉入，让对方失去行动力，因此被称为Tarpit(Tar pit, 焦油坑)。
 
 
 - [Endlessh](https://github.com/skeeto/endlessh) - 一种SSH tarpit，可以缓慢地发送无休止的SSH banner
@@ -178,8 +176,6 @@ Fuzzing
 
 
 ## 主机防护工具
-
-主机防护工具
 
 - [Artillery](https://github.com/BinaryDefense/artillery) - 一套结合了蜜罐，文件系统监视器和警报系统的工具，旨在保护Linux和Windows操作系统
 - [chkrootkit](http://chkrootkit.org/) - 用于在GNU / Linux系统上本地检查rootkit的迹象
@@ -281,9 +277,9 @@ Network perimeter defenses
 
 
 
-## 备战训练及演习
+## 攻防演练
 
-Preparedness training and wargaming，也同样被称为*adversary emulation*和threat simulation*之类。
+Preparedness training and wargaming，备战训练及演习。也同样被称为*adversary emulation*和*threat simulation*之类。此处使用大陆地区较为常见的说法：攻防演练。
 
 - [APTSimulator](https://github.com/NextronSystems/APTSimulator) - Toolset to make a system look as if it was the victim of an APT attack.
 - 可以使系统看起来像APT攻击受害者的工具集
@@ -453,6 +449,7 @@ Windows-based defenses
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
+本项工作在[知识共享（CC协议4.0）下](https://creativecommons.org/licenses/by/4.0/)进行。
 
 
 
