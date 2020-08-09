@@ -1,16 +1,62 @@
-# 网络安全攻防·蓝队清单
+# Awesome Cybersecurity Blue Team - CN**[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)**
 
-> 在网络安全攻防蓝队方向的一些很酷的资源、工具和一些小玩意～
+>   网络安全 · 蓝队清单，中文版
 
-[网络安全（攻防）蓝队](https://en.wikipedia.org/wiki/Blue_team_(computer_security))是由一群能够识别信息技术系统中安全缺陷的人组成。他们能够验证安全防护措施的有效性，并且能持续监控系统并确保已采用的安全防御措施。  
-尽管没有偏见，但这个列表更倾向于[自由软件](https://www.gnu.org/philosophy/free-sw.html)项目，而不是商业的产品和服务。  
-关于攻防对抗的TTPs（战术、技术和过程），请查看这个项目：[awesome-pentest](https://github.com/fabacab/awesome-pentest).  
+本项目基于[awesome-cybersecurity-blueteam](https://github.com/fabacab/awesome-cybersecurity-blueteam)，经过蹩脚的翻译和一些补充，**旨在帮助以中文为母语的安全研究者更好地了解蓝队工作，以及便利地找寻蓝队工具**。
 
-你的贡献和建议十分重要，欢迎来参与(✿◕‿◕)。请查看[贡献准则](CONTRIBUTING.md)来获取更多的信息。本项目是在[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/)许可下进行的。
+非常感谢原作者的整理，对于我这个蓝队的入门学习者来说，帮助非常大。也希望自己的一点点工作能帮助到你，一起来玩吧！
 
-## 📒目录
+> 在网络安全蓝队方向的一些很酷的资源、工具和一些小玩意～
+>
+> 网络安全·蓝队，是由一群能够识别信息技术系统中安全缺陷的人组成。他们能够验证安全防护措施的有效性，并且能持续监控系统并确保已采用的安全防御措施。 
+>
+> 尽管没有偏见，但这个列表更倾向于[自由软件](https://www.gnu.org/philosophy/free-sw.html)项目，而不是商业的产品和服务。 
+>
+> 关于攻防对抗的TTPs（战术、技术和过程），请查看这个项目：[awesome-pentest](https://github.com/fabacab/awesome-pentest).  
+>
+> 你的贡献和建议十分重要，欢迎来参与(✿◕‿◕)。请查看[贡献准则](CONTRIBUTING.md)来获取更多的信息。本项目是在[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/)许可下进行的。
 
-- [TOC]
+
+
+## 🧾目录
+
+- [自动化工具](#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7)
+    - [零碎的](#%E9%9B%B6%E7%A2%8E%E7%9A%84)
+    - [代码库和绑定](#%E4%BB%A3%E7%A0%81%E5%BA%93%E5%92%8C%E7%BB%91%E5%AE%9A)
+    - [安全编排自动化与响应](#%E5%AE%89%E5%85%A8%E7%BC%96%E6%8E%92%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E5%93%8D%E5%BA%94)
+- [云平台安全](#%E4%BA%91%E5%B9%B3%E5%8F%B0%E5%AE%89%E5%85%A8)
+- [通讯安全](#%E9%80%9A%E8%AE%AF%E5%AE%89%E5%85%A8)
+- [DevSecOps](#devsecops)
+    - [应用或二进制加固](#%E5%BA%94%E7%94%A8%E6%88%96%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E5%9B%BA)
+    - [模糊测试](#%E6%A8%A1%E7%B3%8A%E6%B5%8B%E8%AF%95)
+    - [策略执行](#%E7%AD%96%E7%95%A5%E6%89%A7%E8%A1%8C)
+- [蜜罐](#%E8%9C%9C%E7%BD%90)
+    - [Tarpits](#tarpits)
+- [主机防护工具](#%E4%B8%BB%E6%9C%BA%E9%98%B2%E6%8A%A4%E5%B7%A5%E5%85%B7)
+    - [沙箱](#%E6%B2%99%E7%AE%B1)
+- [事件响应工具](#%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94%E5%B7%A5%E5%85%B7)
+    - [事件响应管理平台](#%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0)
+    - [事件证据搜集（取证）](#%E4%BA%8B%E4%BB%B6%E8%AF%81%E6%8D%AE%E6%90%9C%E9%9B%86%E5%8F%96%E8%AF%81)
+- [网络外围防御](#%E7%BD%91%E7%BB%9C%E5%A4%96%E5%9B%B4%E9%98%B2%E5%BE%A1)
+    - [防火墙设备或发行版](#%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E5%A4%87%E6%88%96%E5%8F%91%E8%A1%8C%E7%89%88)
+    - [操作系统发行版](#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%91%E8%A1%8C%E7%89%88)
+    - [网络钓鱼意识和报告](#%E7%BD%91%E7%BB%9C%E9%92%93%E9%B1%BC%E6%84%8F%E8%AF%86%E5%92%8C%E6%8A%A5%E5%91%8A)
+- [备战训练及演习](#%E5%A4%87%E6%88%98%E8%AE%AD%E7%BB%83%E5%8F%8A%E6%BC%94%E4%B9%A0)
+- [安全监控](#%E5%AE%89%E5%85%A8%E7%9B%91%E6%8E%A7)
+    - [端点防护及响应（EDR）](#%E7%AB%AF%E7%82%B9%E9%98%B2%E6%8A%A4%E5%8F%8A%E5%93%8D%E5%BA%94edr)
+    - [网络安全监控（NSM）](#%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9B%91%E6%8E%A7nsm)
+    - [安全信息和事件管理（SIEM）](#%E5%AE%89%E5%85%A8%E4%BF%A1%E6%81%AF%E5%92%8C%E4%BA%8B%E4%BB%B6%E7%AE%A1%E7%90%86siem)
+    - [服务和性能监控](#%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7)
+    - [威胁狩猎](#%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E)
+- [威胁情报](#%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5)
+- [Tor Onion服务防护](#tor-onion%E6%9C%8D%E5%8A%A1%E9%98%B2%E6%8A%A4)
+- [传输层防护](#%E4%BC%A0%E8%BE%93%E5%B1%82%E9%98%B2%E6%8A%A4)
+- [基于macOS的防护](#%E5%9F%BA%E4%BA%8Emacos%E7%9A%84%E9%98%B2%E6%8A%A4)
+- [基于Windows的防护](#%E5%9F%BA%E4%BA%8Ewindows%E7%9A%84%E9%98%B2%E6%8A%A4)
+- [License](#license)
+- [References](#references)
+
+
 
 ## 自动化工具
 
@@ -43,9 +89,11 @@ SOAR, Security Orchestration, Automation and Response, 安全编排自动化与�
 - [Shuffle](https://shuffler.io/) - Graphical generalized workflow (automation) builder for IT professionals and blue teamers.
 用于IT专家和蓝队成员的图形化工作流（自动化）生成器
 
+
+
 ## 云平台安全
 
-另请参阅[asecure.cloud/tools](https://asecure.cloud/tools/).
+另请参阅：[asecure.cloud/tools](https://asecure.cloud/tools/).
 
 - [Checkov](https://www.checkov.io/) - 对于Terraform（在DevOps实践中，代码即基础设施概念）的静态分析器。可以帮助检测CIS策略违规行为，并防止云安全策略配置错误
     - 补充：Terraform是一种安全有效地构建、更改和版本控制基础设施的工具(基础架构自动化的编排工具)[1]
@@ -59,11 +107,15 @@ SOAR, Security Orchestration, Automation and Response, 安全编排自动化与�
     - 补充：Muticloud，多云，是指在单个异构架构中使用多个[云计算](https://en.wikipedia.org/wiki/Cloud_computing)和[存储](https://en.wikipedia.org/wiki/Cloud_storage)服务
 - [gVisor](https://github.com/google/gvisor) - 用Go编写的应用程序内核，它实现Linux系统表面的很大一部分，用以在应用程序和主机内核之间提供隔离边界
 
+
+
 ## 通讯安全
 
 COMSEC, Communications Security, 通讯安全
 
 - [GPG Sync](https://github.com/firstlookmedia/gpgsync) - 用于在组织和团队中进行自动化OpenPGP公钥集成和分发。
+
+
 
 ## DevSecOps
 
@@ -83,15 +135,9 @@ COMSEC, Communications Security, 通讯安全
 - [git-crypt](https://www.agwa.name/projects/git-crypt/) - 同样用于防止用户将密钥提交到Git仓库。其中，选择保护的文件在提交时会加密，在签出时会解密
 - [Snyk](https://snyk.io/) - 用于查找并修复开源依赖项和容器映像中的漏洞和许可证违规信息
 - [SonarQube](https://sonarqube.org) - 持续性代码检查工具，可在自动测试期间提供详细的报告，并就新引入的安全漏洞提供警告
-
-
-
 ### 应用或二进制加固
 
 - [Egalito](https://egalito.org/) - 是一个二进制反编译器，可以完全反汇编、转换和重新生成用于二进制强化和安全性研究的普通Linux二进制文件。
-
-
-
 ### 模糊测试
 
 Fuzzing
@@ -99,11 +145,11 @@ Fuzzing
 另请参阅： [Awesome-Fuzzing](https://github.com/secfigo/Awesome-Fuzzing).
 
 - [FuzzBench](https://google.github.io/fuzzbench/) -  用于根据Google规模的各种实际基准来评估模糊测试器的一项免费服务
-
 ### 策略执行
 
 - [OpenPolicyAgent](https://www.openpolicyagent.org/)  - 用于跨云原生环境进行统一策略控制的一套工具集和框架
 - [Tang](https://github.com/latchset/tang) - 用于将数据绑定到网络状态的服务器。只有当客户端位于特定的（安全的）网络上时才向客户端提供数据
+
 
 
 ## 蜜罐
@@ -144,8 +190,6 @@ Fuzzing
 - [Open Source HIDS SECurity (OSSEC)](https://www.ossec.net/) - 完全开源、免费的，功能丰富的基于主机的入侵检测系统（HIDS）
 - [Rootkit Hunter (rkhunter)](http://rkhunter.sourceforge.net/) - 该工具兼容POSIX的Bash脚本，用以扫描主机来查找各种恶意软件迹象
 
-
-
 ### 沙箱
 
 - [Firejail](https://firejail.wordpress.com/) - SUID program that reduces the risk of security breaches by restricting the running environment of untrusted applications using Linux namespaces and seccomp-bpf.
@@ -156,9 +200,11 @@ Fuzzing
         - 再来说说BPF，BPF全称是Berkeley Packet Filter。目的是为了提供一种过滤包的方法，并且要避免从内核空间到用户空间的无用的数据包复制行为
         - 所以，seccomp-bpf即采用了BPF方法对syscall进行过滤的seccomp。seccomp在过滤syscall的时候，借助了BPF定义的过滤规则，以及处于内核的用BPF language写的mini-program
 
+
+
 ## 事件响应工具
 
-另请参阅 [awesome-incident-response](https://github.com/meirwah/awesome-incident-response).
+另请参阅：[awesome-incident-response](https://github.com/meirwah/awesome-incident-response).
 
 - [LogonTracer](https://github.com/JPCERTCC/LogonTracer) - 可用于可视化分析Windows事件日志来调查恶意的Windows登录
 - [Volatility](https://www.volatilityfoundation.org/) - 一套先进的内存取证框架
@@ -193,6 +239,8 @@ Incident Response management consoles，事件响应管理平台
 - [ir-rescue](https://github.com/diogo-fernan/ir-rescue) - 用于在事件响应期间全面收集主机取证数据的脚本（包括Windows Batch脚本和Unix Bash脚本）
 - [Margarita Shotgun](https://github.com/ThreatResponse/margaritashotgun) - 命令行工具，用于并行的远程内存获取，可自由选择是否与Amazon EC2实例一起使用
 
+
+
 ## 网络外围防御
 
 Network perimeter defenses
@@ -206,8 +254,6 @@ Network perimeter defenses
 
 - [OPNsense](https://opnsense.org/) - 一个基于FreeBSD的防火墙和路由平台
 - [pfSense](https://www.pfsense.org/) - 用于防火墙和路由器的FreeBSD发行版
-
-
 
 ### 操作系统发行版
 
@@ -233,6 +279,8 @@ Network perimeter defenses
         - DKIM：DomainKeys Identified Mail，域名密钥识别邮件。是一套电子邮件认证机制，使用公开密钥加密的基础提供了数字签名与身份验证的功能，以检测寄件者、主旨、内文、附件等部分有否被伪冒或窜改。
 - [phishing_catcher](https://github.com/x0rz/phishing_catcher) - 使用[CertStream](https://certstream.calidog.io/)服务在证书透明日志(CTL)中通过域名监视可疑TLS证书的可配置脚本
 
+
+
 ## 备战训练及演习
 
 Preparedness training and wargaming，也同样被称为*adversary emulation*和threat simulation*之类。
@@ -245,6 +293,7 @@ Preparedness training and wargaming，也同样被称为*adversary emulation*和
 - [Metta](https://github.com/uber-common/metta) - 自动化的信息安全防范工具，可以进行对抗性模拟
 - [Network Flight Simulator (`flightsim`)](https://github.com/alphasoc/flightsim) - 用于生成恶意网络流量，可帮助安全团队评估安全控制以及审核他们网络的可见性
 - [RedHunt OS](https://github.com/redhuntlabs/RedHunt-OS) - 基于Ubuntu的开放式虚拟设备（`.ova`），预配置了多个威胁仿真工具以及防守方的工具包
+
 
 
 ## 安全监控
@@ -370,6 +419,8 @@ Transport-layer defenses
 - [OpenVPN](https://openvpn.net/) - 一个开源的、基于SSL / TLS的虚拟专用网络（VPN）
 - [Tor](https://torproject.org/) - 一个用于规避审查制度的匿名覆盖网络，提供分布式的，经过密码验证的域名服务（`.onion`域），用以增强发布者的隐私和服务可用性
 
+
+
 ## 基于macOS的防护
 
 macOS-based defenses
@@ -379,6 +430,8 @@ macOS-based defenses
 - [Santa](https://github.com/google/santa) - 适用于macOS的二进制白名单/黑名单系统
 - [Stronghold](https://github.com/alichtman/stronghold) - 用于在终端轻松配置macOS安全设置
 - [macOS Fortress](https://github.com/essandess/macOS-Fortress) - 提供内核级、操作系统级和客户端级安全功能的自动配置，包括私有化代理和macOS的防病毒扫描。
+
+
 
 ## 基于Windows的防护
 
